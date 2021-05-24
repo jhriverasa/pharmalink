@@ -6,8 +6,8 @@ const MyApp = ({ Component, pageProps }) => {
   return (
     <Fragment>
       <Head>
-        <title>Pharmalink</title>
-        <meta name="description" content="Created By PL" />
+        <title>Pharma-Link</title>
+        <meta name="description" content="Created by PL" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
