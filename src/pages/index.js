@@ -9,11 +9,15 @@ const Home = () => {
           <div className="flex bg-white h-2/3 w-full rounded-bl-2xl">
             <form className="mx-auto">
               <label className="text-xl">
-                Usuario<br></br>
-                <input type="text" name="user" className="h-12 border-2 p-7 text-center border-gray-300 bg-gray-100 rounded-2xl"/><br></br><br></br>
+                Usuario
+                <div className="flex flex-row border-2 h-14 text-center border-gray-300 bg-gray-100 rounded-2xl">
+                <img src={'/usuario_login.jpeg'} className="h-7 m-3"></img>
+                <input type="text" name="user" className="text-center bg-gray-100 rounded-2xl" />
+                </div>
               </label>
               <label className="text-xl">
                 Contraseña<br></br>
+                <img src={'/llave_login.png'} className="h-7 float-left"></img>
                 <input type="text" name="password" className="h-12 border-2 p-7 text-center border-gray-300 bg-gray-100 rounded-2xl"/>
               </label><br></br><br></br>
               <input type="submit" value="Iniciar sesión" className="p-3 w-full my-10 rounded-2xl bg-gray-500 hover:bg-gray-400 text-xl text-white font-bold"/>
