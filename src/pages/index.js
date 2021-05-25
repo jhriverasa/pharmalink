@@ -1,3 +1,5 @@
+import Inputbarlogin from "C:/Users/juanc/Documents/UNAL/2021 - 1/TPI/Interfaz/pl/pharmalink/src/components/inputbarlogin";
+
 const Home = () => {
   return (
     <div className="flex bg-pic-login h-screen bg-center bg-no-repeat bg-cover font-Rosario">
@@ -10,10 +12,7 @@ const Home = () => {
             <form className="mx-auto">
               <label className="text-xl">
                 Usuario
-                <div className="flex flex-row border-2 h-14 text-center border-gray-300 bg-gray-100 rounded-2xl">
-                <img src={'/usuario_login.jpeg'} className="h-7 m-3"></img>
-                <input type="text" name="user" className="text-center bg-gray-100 rounded-2xl" />
-                </div>
+               <Inputbarlogin picurl="/usuario_login.jpeg" alt="ícono usuario"/>
               </label>
               <label className="text-xl">
                 Contraseña<br></br>
