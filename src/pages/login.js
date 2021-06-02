@@ -1,17 +1,21 @@
 import { getFontDefinitionFromManifest } from "next/dist/next-server/server/font-utils";
-import Inputbarlogin from "C:/Users/juanc/Documents/UNAL/2021 - 1/TPI/Interfaz/pl/pharmalink/src/components/inputbarlogin";
+import Inputbarlogin from "../components/inputbarlogin";
 import {useState} from "react";
-import Button from "./Button";
+import Button from "../components/Button";
+import userdata from "../data/database.json";
 
 const Login = () => {
 
-  const[username,setUsername]=useState("");
-  const[password,setPassword]=useState("");
+  //Creación de variables y funciones para modificarlas
+  const[username,setUsername]=useState(""); 
+  const[password,setPassword]=useState(""); 
 
+  //Muestra de entradas en ventana de alerta
   const handleSend = () =>{
     alert(`User: ${username}, Password: ${password}`)
   };
 
+  //Renderizado
   return(
     <div className="flex bg-pic-login h-screen bg-center bg-no-repeat bg-cover font-Rosario">
       <div className="flex h-5/6 w-3/4 m-auto rounded-2xl">
@@ -27,7 +31,7 @@ const Login = () => {
               <label className="text-xl">
                 Contraseña<Inputbarlogin picurl="/llave_login.png" alt="ícono contraseña" tip="password" name="contraseña" val={password} update={setPassword} />
               </label>
-              <Button onSend={handleSend} value="Iniciar Sesión" hyper="./buscarmeds"/>
+              <Button onSend={handleSend} value="Iniciar Sesión" hyper="./buscarmeds" data={username}/>
             </form>
           </div>
         </div>
