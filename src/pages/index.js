@@ -24,11 +24,14 @@ const Home = () => {
           {
             dataUser.map((data) => {
               if (data.username == username) {
+                { data.estado = 1 }
                 return (
                   <div>
                     {data.name}
                   </div>
                 );
+              } else {
+                { data.estado = 0 }
               }
             })
           }

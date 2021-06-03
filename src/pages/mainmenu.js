@@ -2,7 +2,7 @@ import "tailwindcss/tailwind.css";
 import { Fragment } from "react";
 import Head from "next/head";
 import { dataUser } from "./api/dataUser";
-import { Home } from "./index";
+import { users } from "./index";
 
 const numbers = [1, 2, 3, 4, 5];
 const Main = () => {
@@ -30,7 +30,17 @@ const Main = () => {
 
       </div>
       <div className="flex-1 border border-transparent rounded-r-lg text-center py-12 px-24 bg-gradient-to-b from-blue to-green my-20 mr-60">
-
+        {
+          dataUser.map((data) => {
+            if (data.estado == 1) {
+              return (
+                <div className="text-white text-4xl pt-12">
+                  {"Bienvenid@ " + data.name}
+                </div>
+              );
+            }
+          })
+        }
       </div>
     </div>
   );
