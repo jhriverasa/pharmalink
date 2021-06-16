@@ -7,7 +7,7 @@ function Inputbarlogin({picurl,alt,tip,name,val,update}) {
     };
 
     return(
-        <div className="flex flex-row border-2 h-14 text-center border-gray-300 bg-gray-100 rounded-2xl m">
+        <div className="flex flex-row border-2 h-14 text-center border-gray-300 bg-gray-100 rounded-2xl">
         <img src={picurl} alt={alt} className={estilo}></img>
         <input 
         type={tip} 

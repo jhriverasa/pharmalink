@@ -1,9 +1,10 @@
-import Login from "C:/Users/juanc/Documents/UNAL/2021 - 1/TPI/Interfaz/pl/pharmalink/src/pages/login";
-import BusqMeds from "C:/Users/juanc/Documents/UNAL/2021 - 1/TPI/Interfaz/pl/pharmalink/src/pages/buscarmeds";
+import Login from "./login";
+import BusqMeds from "./buscarmeds";
+import PhDisp from "./ph_dispensar";
 
 const Home = () => {
   return (
-    <Login />
+    <PhDisp />
   );
 
 };

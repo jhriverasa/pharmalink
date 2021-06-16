@@ -1,11 +1,44 @@
-{
-  "physicians":[
-    { "name": "Mitchell Rodríguez", "username":"mierodriguezba", "password":"12345", "role": "med" },
-    { "name": "Juan Santana", "username":"jsantanas", "password":"98765", "role": "med" },
-    { "name": "Segundo Domínguez", "username":"2dodom", "password":"22222", "role": "med" },
-    { "name": "Anastasio Mora", "username":"amora", "password": "13795", "role": "med" },
-    { "name": "Jenny Rodríguez", "username": "jrod", "password": "14725", "role": "pharma" },
-    { "name": "Manuel Figueroa", "username": "mfig", "password": "36925", "role": "pharma" },
-    { "name": "Jhonatan Rivera", "username": "jrivera", "password": "15935", "role": "pharma" }
-  ]
-}
+[
+  {
+    "name": "Mitchell Rodríguez",
+    "username": "mierodriguezba",
+    "password": "12345",
+    "role": "med"
+  },
+  {
+    "name": "Juan Santana",
+    "username": "jsantanas",
+    "password": "98765",
+    "role": "med"
+  },
+  {
+    "name": "Segundo Domínguez",
+    "username": "2dodom",
+    "password": "22222",
+    "role": "med"
+  },
+  {
+    "name": "Anastasio Mora",
+    "username": "amora",
+    "password": "13795",
+    "role": "med"
+  },
+  {
+    "name": "Jenny Rodríguez",
+    "username": "jrod",
+    "password": "14725",
+    "role": "pharma"
+  },
+  {
+    "name": "Manuel Figueroa",
+    "username": "mfig",
+    "password": "36925",
+    "role": "pharma"
+  },
+  {
+    "name": "Jhonatan Rivera",
+    "username": "jrivera",
+    "password": "15935",
+    "role": "pharma"
+  }
+]
