@@ -1,15 +1,14 @@
-import InputPac from "../components/inputbarpatient";
-import DataTable from "../components/collapsibletable";
-import Conven from "../components/convention";
+import { FormInput } from "~/components/primitive";
+import DataTable from "../collapsibletable";
+import Convention from "../convention";
 import { useState } from "react";
 
-function PhDisp() {
+const MedicineDispensing = () => {
   const [name, setName] = useState("");
 
   const handleChangeInput = (e) => {
     setName(e.target.value);
   };
-
 
   return (
     <div className="flex flex-col bg-pic-login h-screen bg-center bg-no-repeat bg-cover font-Rosario">
@@ -22,50 +21,57 @@ function PhDisp() {
             <div className="bg-green-600 rounded-br-2xl rounded-tl-xl px-5 py-1 border-green-600 border-2 text-white text-xl">
               Paciente
             </div>
-            <InputPac
+            <FormInput
               value={name}
-              onChange={handleChangeInput}
-              id="name"
+              name="name"
               title="Nombre"
-            />
-            <InputPac
-              value={name}
+              type="text"
               onChange={handleChangeInput}
-              id="ident"
+            />
+            <FormInput
+              value={name}
+              name="id"
               title="Identificación"
-            />
-            <InputPac
-              value={name}
+              type="text"
               onChange={handleChangeInput}
-              id="cama"
+            />
+            <FormInput
+              value={name}
+              name="bed"
               title="Cama"
-            />
-            <InputPac
-              value={name}
+              type="text"
               onChange={handleChangeInput}
-              id="serv"
+            />
+            <FormInput
+              value={name}
+              name="service"
               title="Servicio"
+              type="text"
+              onChange={handleChangeInput}
             />
           </div>
           <div className="flex flex-row m-0 rounded-2xl h-1/2 w-full">
-            <InputPac
+            <FormInput
               value={name}
-              onChange={handleChangeInput}
-              id="fecha"
+              name="date"
               title="Buscar desde"
-            />
-            <InputPac
-              value={name}
+              type="date"
               onChange={handleChangeInput}
-              id="nombregen"
+            />
+            <FormInput
+              value={name}
+              name="generic"
               title="Nombre Genérico"
+              type="text"
+              onChange={handleChangeInput}
             />
             {name !== "juan" && (
-              <InputPac
+              <FormInput
                 value={name}
-                onChange={handleChangeInput}
-                id="bodega"
+                name="warehouse"
                 title="Bodega que despacha"
+                type="text"
+                onChange={handleChangeInput}
               />
             )}
           </div>
@@ -102,37 +108,61 @@ function PhDisp() {
             <div className="text-center text-green-600 font-bold text-sm h-1/4 hover: cursor-default">
               Tiempo en espera
             </div>
-            <Conven color="#FEFE33" op="0.6" text="&lt; 6 horas" />
-            <Conven color="#66B032" op="0.6" text="&gt;= 6 horas" />
-            <Conven color="#8601AF" op="0.5" text="&gt;= 12 horas" />
+            <Convention color="#FEFE33" opacity="0.6" text="&lt; 6 horas" />
+            <Convention color="#66B032" opacity="0.6" text="&gt;= 6 horas" />
+            <Convention color="#8601AF" opacity="0.5" text="&gt;= 12 horas" />
           </div>
           <div className="flex flex-col mb-1 bg-white border-green-600 border-2 rounded-2xl h-3/12">
             <div className="text-center text-green-600 font-bold text-sm h-1/4 hover: cursor-default">
               Prioridad
             </div>
-            <Conven color="#FE2712" op="0.6" text="Urgentes" />
-            <Conven color="#A3C8EF" op="0.6" text="Sugeridos" />
-            <Conven color="#FB9902" op="0.6" text="Maternidad gratuita" />
+            <Convention color="#FE2712" opacity="0.6" text="Urgentes" />
+            <Convention color="#A3C8EF" opacity="0.6" text="Sugeridos" />
+            <Convention
+              color="#FB9902"
+              opacity="0.6"
+              text="Maternidad gratuita"
+            />
           </div>
           <div className="flex flex-col bg-white border-green-600 border-2 rounded-2xl h-6/12">
             <div className="text-center text-green-600 font-bold text-sm h-1/4 hover: cursor-default">
               Estado
             </div>
-            <Conven color="#153437" op="0.6" text="Autorización en trámite" />
-            <Conven color="#DBE4CF" op="1" text="Formulación con esquema" />
-            <Conven color="#288568" op="0.6" text="Formulación modificados" />
-            <Conven color="#FFD1BA" op="0.6" text="Interacción medicamentosa" />
-            <Conven
+            <Convention
+              color="#153437"
+              opacity="0.6"
+              text="Autorización en trámite"
+            />
+            <Convention
+              color="#DBE4CF"
+              opacity="1"
+              text="Formulación con esquema"
+            />
+            <Convention
+              color="#288568"
+              opacity="0.6"
+              text="Formulación modificados"
+            />
+            <Convention
+              color="#FFD1BA"
+              opacity="0.6"
+              text="Interacción medicamentosa"
+            />
+            <Convention
               color="#0391CE"
-              op="0.6"
+              opacity="0.6"
               text="Interacción + Conciliación"
             />
-            <Conven color="#A7194B" op="0.6" text="Suministro suspendido" />
+            <Convention
+              color="#A7194B"
+              opacity="0.6"
+              text="Suministro suspendido"
+            />
           </div>
         </div>
       </div>
     </div>
   );
-}
+};
 
-export default PhDisp;
+export default MedicineDispensing;
