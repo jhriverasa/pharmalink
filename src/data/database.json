@@ -1,51 +1,53 @@
-[
-  {
-    "id": 1,
-    "name": "Mitchell Rodríguez",
-    "username": "mierodriguezba",
-    "password": "12345",
-    "role": "med"
-  },
-  {
-    "id": 2,
-    "name": "Juan Santana",
-    "username": "jsantanas",
-    "password": "98765",
-    "role": "med"
-  },
-  {
-    "id": 3,
-    "name": "Segundo Domínguez",
-    "username": "2dodom",
-    "password": "22222",
-    "role": "med"
-  },
-  {
-    "id": 4,
-    "name": "Anastasio Mora",
-    "username": "amora",
-    "password": "13795",
-    "role": "med"
-  },
-  {
-    "id": 5,
-    "name": "Jenny Rodríguez",
-    "username": "jrod",
-    "password": "14725",
-    "role": "pharma"
-  },
-  {
-    "id": 6,
-    "name": "Manuel Figueroa",
-    "username": "mfig",
-    "password": "36925",
-    "role": "pharma"
-  },
-  {
-    "id": 7,
-    "name": "Jhonatan Rivera",
-    "username": "jrivera",
-    "password": "15935",
-    "role": "pharma"
-  }
-]
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "Mitchell Rodríguez",
+      "username": "mierodriguezba",
+      "password": "12345",
+      "role": "med"
+    },
+    {
+      "id": 2,
+      "name": "Juan Santana",
+      "username": "jsantanas",
+      "password": "98765",
+      "role": "med"
+    },
+    {
+      "id": 3,
+      "name": "Segundo Domínguez",
+      "username": "2dodom",
+      "password": "22222",
+      "role": "med"
+    },
+    {
+      "id": 4,
+      "name": "Anastasio Mora",
+      "username": "amora",
+      "password": "13795",
+      "role": "med"
+    },
+    {
+      "id": 5,
+      "name": "Jenny Rodríguez",
+      "username": "jrod",
+      "password": "14725",
+      "role": "pharma"
+    },
+    {
+      "id": 6,
+      "name": "Manuel Figueroa",
+      "username": "mfig",
+      "password": "36925",
+      "role": "pharma"
+    },
+    {
+      "id": 7,
+      "name": "Jhonatan Rivera",
+      "username": "1234",
+      "password": "1234",
+      "role": "pharma"
+    }
+  ]
+}

@@ -13,13 +13,13 @@ const Login = () => {
   //Muestra de entradas en ventana de bienvenida
   const handleLogin = (e, user, pass) => {
     e.preventDefault();
-    const userData = database.find((reg) => {
+    const userData = database.users.find((reg) => {
       return reg.username === user && reg.password === pass;
     });
     if (!userData) {
       console.log("invalid user");
     } else {
-      router.push(`/buscarmeds/${userData.name}`);
+      router.push(`/buscarmeds/${userData.id}`);
     }
   };
   //Renderizado
