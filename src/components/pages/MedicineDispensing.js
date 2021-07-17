@@ -1,7 +1,7 @@
-import { FormInput } from "~/components/primitive";
+import { useState } from "react";
+import { FormInput, Select } from "~/components/primitive";
 import DataTable from "../collapsibletable";
 import Convention from "../convention";
-import { useState } from "react";
 
 const MedicineDispensing = () => {
   const [name, setName] = useState("");
@@ -16,64 +16,136 @@ const MedicineDispensing = () => {
         <div className="m-0 bg-white border-green-600 border-2 rounded-3xl h-1/3 w-full text-center text-2xl text-green-600 font-bold">
           Dispensación de Medicamentos
         </div>
-        <div className="mx-0 mt-1 bg-white border-green-600 border-2 rounded-2xl h-2/3 w-full">
-          <div className="flex flex-row m-0 rounded-2xl h-1/2 w-full">
+        <div className="flex flex-col w-full bg-white border-green-600 border-2 rounded-2xl mx-0 mt-1">
+          <div className="flex justify-between items-stretch w-full">
             <div className="bg-green-600 rounded-br-2xl rounded-tl-xl px-5 py-1 border-green-600 border-2 text-white text-xl">
               Paciente
             </div>
-            <FormInput
-              value={name}
-              name="name"
-              title="Nombre"
-              type="text"
-              onChange={handleChangeInput}
-            />
-            <FormInput
-              value={name}
-              name="id"
-              title="Identificación"
-              type="text"
-              onChange={handleChangeInput}
-            />
-            <FormInput
-              value={name}
-              name="bed"
-              title="Cama"
-              type="text"
-              onChange={handleChangeInput}
-            />
-            <FormInput
-              value={name}
-              name="service"
-              title="Servicio"
-              type="text"
-              onChange={handleChangeInput}
-            />
+            <div className="flex flex-auto items-stretch py-2">
+              <div className="flex w-3/10 mx-2">
+                <FormInput
+                  value={name}
+                  name="name"
+                  title="Nombre"
+                  type="text"
+                  onChange={handleChangeInput}
+                />
+              </div>
+              <div className="flex w-1/4 mx-2">
+                <div className="flex justify-between">
+                  <label className="mr-1">Identificación</label>
+                  <div className="w-1/2 pl-0.5">
+                    <Select
+                      value={name}
+                      onChange={handleChangeInput}
+                      label="Age"
+                      inputProps={{
+                        name: "age",
+                      }}
+                      options={[
+                        { value: 1, label: "CC" },
+                        { value: 2, label: "Pasaporte" },
+                        { value: 3, label: "C.Extranjería" },
+                      ]}
+                    />
+                  </div>
+                </div>
+                <div className="flex">
+                  <FormInput
+                    value={name}
+                    name="id"
+                    type="text"
+                    onChange={handleChangeInput}
+                  />
+                </div>
+              </div>
+              <div className="flex w-2/12 mx-2">
+                <FormInput
+                  value={name}
+                  name="bed"
+                  title="Cama"
+                  type="text"
+                  onChange={handleChangeInput}
+                />
+              </div>
+              <div className="flex w-2/12 ml-6">
+                <label className="mr-2">Servicio</label>
+
+                <Select
+                  value={name}
+                  onChange={handleChangeInput}
+                  label="Service"
+                  inputProps={{
+                    name: "service",
+                  }}
+                  options={[
+                    { value: 1, label: "UCI" },
+                    { value: 2, label: "Unipersonal" },
+                    { value: 3, label: "Bipersonal" },
+                  ]}
+                />
+              </div>
+            </div>
           </div>
-          <div className="flex flex-row m-0 rounded-2xl h-1/2 w-full">
-            <FormInput
-              value={name}
-              name="date"
-              title="Buscar desde"
-              type="date"
-              onChange={handleChangeInput}
-            />
-            <FormInput
-              value={name}
-              name="generic"
-              title="Nombre Genérico"
-              type="text"
-              onChange={handleChangeInput}
-            />
-            {name !== "juan" && (
+          <div className="flex items-stretch w-full py-2">
+            <div className="flex w-2/10 mx-2">
               <FormInput
                 value={name}
-                name="warehouse"
-                title="Bodega que despacha"
+                name="date"
+                title="Buscar desde"
+                type="date"
+                onChange={handleChangeInput}
+              />
+            </div>
+            <div className="flex w-3/10 mx-2">
+              <FormInput
+                value={name}
+                name="generic"
+                title="Nombre Genérico"
                 type="text"
                 onChange={handleChangeInput}
               />
-            )}
+            </div>
+
+            <div className="flex w-1/4 ml-4">
+              <label className="mr-2">Bodega que despacha:</label>
+              <div className="flex">
+                <Select
+                  value={name}
+                  onChange={handleChangeInput}
+                  label="Bodega"
+                  inputProps={{
+                    name: "warehouse",
+                  }}
+                  options={[
+                    { value: 1, label: "Farmacia central" },
+                    { value: 2, label: "Oncología" },
+                    { value: 3, label: "Hematología" },
+                  ]}
+                />
+              </div>
+            </div>
+
+            <div className="flex w-1/10 mx-2">
+              <label className="mr-2">Mostrar</label>
+
+              <Select
+                value={name}
+                onChange={handleChangeInput}
+                label="Mostrar"
+                inputProps={{
+                  name: "show",
+                }}
+                options={[
+                  { value: 1, label: "Todos" },
+                  { value: 2, label: "Dispensados" },
+                  { value: 3, label: "No dispensados" },
+                ]}
+              />
+            </div>
+            <div className="flex h-full bg-green-base-1 rounded-xl p-1.5 mx-2">
+              <img src="/search-icon-topbar.png" width="20px"></img>
+            </div>
           </div>
         </div>
       </div>

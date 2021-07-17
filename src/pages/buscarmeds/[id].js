@@ -19,21 +19,42 @@ function BusqMeds() {
               Farmacia
             </h1>
 
-            <div className="font-bold pb-2 text-2xl">Dispensación</div>
+            <div
+              className="font-bold pb-2 pt-2 text-2xl cursor-pointer hover:text-green-base-1 hover:bg-gray-200"
+              onClick={(e) => {
+                e.preventDefault();
+                router.push("/dispensing");
+              }}
+            >
+              Dispensación
+            </div>
             <Separator color="#000000" size="2px" />
             <div className="font-bold pb-2 pt-9 text-2xl">Despacho</div>
             <Separator color="#000000" size="2px" />
             <div className="ml-3">
-              <div className="py-3 text-2xl">Farmacia</div>
+              <div className="py-3 text-2xl cursor-pointer hover:text-green-base-1 hover:bg-gray-200">
+                Farmacia
+              </div>
               <Separator color="#a4a0a0" size="1px" />
-              <div className="py-3 text-2xl">Directos</div>
+              <div className="py-3 text-2xl cursor-pointer hover:text-green-base-1 hover:bg-gray-200">
+                Directos
+              </div>
               <Separator color="#a4a0a0" size="1px" />
-              <div className="py-3 text-2xl">Remisión</div>
+              <div className="py-3 text-2xl cursor-pointer hover:text-green-base-1 hover:bg-gray-200">
+                Remisión
+              </div>
               <Separator color="#a4a0a0" size="1px" />
-              <div className="py-3 text-2xl">Especiales</div>
+              <div className="py-3 text-2xl cursor-pointer hover:text-green-base-1 hover:bg-gray-200">
+                Especiales
+              </div>
               <Separator color="#a4a0a0" size="1px" />
             </div>
-            <div className="font-bold pb-2 pt-9 text-2xl">Devoluciones</div>
+            <div className="pt-6">
+              <div className="font-bold pb-2 pt-3 text-2xl cursor-pointer hover:text-green-base-1 hover:bg-gray-200">
+                Devoluciones
+              </div>
+            </div>
+
             <Separator color="#000000" size="2px" />
           </div>
         </div>
