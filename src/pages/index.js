@@ -14,6 +14,7 @@ const Home = () => {
   }
 
   return (
+<<<<<<< HEAD
     <div className="flex bg-cover h-screen bg-center bg-no-repeat font-Rosario" style={{ backgroundImage: 'url(/background1.png)' }}>
       <div className="flex flex-row m-auto">
         <div className="flex flex-col w-1/2 rounded-l-lg border border-green-300 bg-white py-14 px-32 my-20 ml-60">
@@ -47,6 +48,9 @@ const Home = () => {
       </div>
 
     </div>
+=======
+    <div>WELCOME</div>
+>>>>>>> main
   );
 };
 

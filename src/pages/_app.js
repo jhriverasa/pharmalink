@@ -6,10 +6,14 @@ const MyApp = ({ Component, pageProps }) => {
   return (
     <Fragment>
       <Head>
-        <title>Pharmalink</title>
-        <meta name="description" content="Created By PL" />
+        <title>Pharma-Link</title>
+        <meta name="description" content="Created by PL" />
         <link rel="icon" href="/favicon.ico" />
+<<<<<<< HEAD
         <link href="https://fonts.googleapis.com/css2?family=Rosario" rel="stylesheet"></link>
+=======
+        <link href="https://fonts.googleapis.com/css2?family=Rosario" rel="stylesheet" />
+>>>>>>> main
       </Head>
 
       <Component {...pageProps} />
