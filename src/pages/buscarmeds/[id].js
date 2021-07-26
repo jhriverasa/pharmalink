@@ -39,7 +39,7 @@ function BusqMeds() {
               <div className="py-3 text-2xl cursor-pointer hover:text-green-base-1 hover:bg-gray-200">
                 Directos
               </div>
-              <Separator color="#a4a0a0" size="1px" />
+              <Separator color="#a4a0a0" size=  "1px" />
               <div className="py-3 text-2xl cursor-pointer hover:text-green-base-1 hover:bg-gray-200">
                 Remisión
               </div>
