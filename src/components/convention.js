@@ -1,6 +1,6 @@
 const Convention = ({ color, opacity, text }) => {
   return (
-    <div className="flex flex-row w-5/6 mx-auto h-1/4 space-x-3">
+    <div className="flex flex-row w-5/6 mx-auto h-1/4 space-x-3 my-1">
       <div
         style={{
           background: color,
