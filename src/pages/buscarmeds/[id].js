@@ -59,7 +59,7 @@ function BusqMeds() {
           </div>
         </div>
         <div className="flex justify-center w-1/2 p-12 bg-gradient-to-b from-login-blue to-login-green">
-          <div className="text-xl">{`Bienvenid@, ${userData.name} !`}</div>
+          <div className="text-xl">{`Bienvenid@, ${userData ? userData.name : "Usuario" } !`}</div>
         </div>
       </div>
     </div>
