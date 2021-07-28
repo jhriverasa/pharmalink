@@ -1,7 +1,16 @@
+import { useEffect } from "react";
+
 const Home = () => {
-  return (
-    <div>WELCOME</div>
-  );
+  const redirect = () => {
+    window.location = "/login";
+  };
+
+  useEffect(() => {
+    // window is accessible here.
+    setTimeout(redirect, 2000);
+  }, []);
+
+  return <div>Redirecting...</div>;
 };
 
 export default Home;
