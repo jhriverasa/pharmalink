@@ -125,11 +125,11 @@ Row.propTypes = {
 };
 
 const rows = [
-  createData("Bread", 159, 6.0, 24, 4.0, 3.99),
-  createData("Ice cream sandwich", 237, 9.0, 37, 4.3, 4.99),
-  createData("Eclair", 262, 16.0, 24, 6.0, 3.79),
-  createData("Cupcake", 305, 3.7, 67, 4.3, 2.5),
-  createData("Gingerbread", 356, 16.0, 49, 3.9, 1.5),
+  createData("S", "Andrés Mora", "Ampicilina/Sulbactam", "1,5 g", "Ampolla", 3.99),
+  createData("S", "Andrés Mora", "Metformina", "850 mg", "Tableta", 4.99),
+  createData("S", "Andrés Mora", "Omeprazol", "20 mg", "Cápsula", 3.79),
+  createData("S", "Andrés Mora", "Metoclopramina", "5 mg", "Jarabe", 2.5),
+  createData("S", "Andrés Mora", "Alopurinol", "100 mg", "Tableta", 1.5),
 ];
 
 export default function CollapsibleTable() {
@@ -139,16 +139,16 @@ export default function CollapsibleTable() {
         <TableHead>
           <TableRow>
             <TableCell />
-            <TableCell>Dessert (100g serving)</TableCell>
-            <TableCell align="right">Calories</TableCell>
-            <TableCell align="right">Fat&nbsp;(g)</TableCell>
-            <TableCell align="right">Carbs&nbsp;(g)</TableCell>
-            <TableCell align="right">Protein&nbsp;(g)</TableCell>
+            <TableCell>Aut?</TableCell>
+            <TableCell align="right">Paciente</TableCell>
+            <TableCell align="right">Nombre&nbsp;Genérico</TableCell>
+            <TableCell align="right">Conc.</TableCell>
+            <TableCell align="right">Unidad</TableCell>
           </TableRow>
         </TableHead>
         <TableBody>
           {rows.map((row) => (
-            <Row key={row.name} row={row} />
+            <Row key={row.name} row={row} />  
           ))}
         </TableBody>
       </Table>
